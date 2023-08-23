@@ -1,0 +1,9 @@
+# Ignore non liquid files
+# Folders
+assets/
+
+# Filetypes
+*.md
+
+# Individual file overrides
+sections/announcement-bar.liquid
