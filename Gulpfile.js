@@ -1,3 +1,6 @@
+// Config
+const config = require('./config');
+
 // Gulp
 const gulp = require('gulp');
 
@@ -13,12 +16,6 @@ const cssmin = require('gulp-clean-css');
 // JS
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-
-// Add store handle here
-let shopify_url = ''
-
-// Keep customizer in sync when running the CLI? Assign '--theme-editor-sync' key to additionalCLIArgs variable.
-let additionalCLIArgs = '';
 
 // Error notifier when Gulp is running
 let plumberErrorHandler = {
@@ -58,7 +55,7 @@ gulp.task('build', gulp.series('styles', 'scripts'));
 gulp.task(
   'shopify-cli',
   shell.task([
-    `shopify theme dev --store ${shopify_url} ${additionalCLIArgs}`,
+    `shopify theme dev --store ${config.shopify_url} ${config.additionalCLIArgs}`,
   ])
 );
 

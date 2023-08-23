@@ -24,9 +24,8 @@ export NVM_DIR="$HOME/.nvm"
 
 ```
 module.exports = {
-  // switch between commented-out `shopify_url` values as needed
   shopify_url: "your_shopify_store_handle.myshopify.com",
-  theme_editor_sync: true // set to true to have customizer changes persist
+  additionalCLIArgs: "" // example "--theme-editor-sync" for two-way sync with theme JSON files
 };
 ```
 
